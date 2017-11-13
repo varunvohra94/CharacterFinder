@@ -34,8 +34,16 @@ python --csv_input eval.csv --output_path eval.record --label_map_path character
 For training you need to construct an object-detection training pipeline. 
 * You can use any of the config files present in object\_detection/samples/configs/ as basis
 * Adjust the number of classes depending on the number of character you are training on
-* It is recommended to train your model from a pre-trained checkpoint. Tensorlfow provides several pre-trained checkpoints which can be found [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
-* Change the ` fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED/model.ckpt" ` to point to the checkpoint you want to use
-
+* It is recommended to train your model from a pre-trained checkpoint. Tensorflow provides several pre-trained checkpoints which can be found [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
+* Changes in the config file:
+ * Change the ` fine_tune_checkpoint: "PATH_TO_BE_CONFIGURED/model.ckpt" ` to point to the checkpoint you want to use
+ * In ```
+ train_input_reader: {
+  tf_record_input_reader {
+    input_path: "PATH_TO_BE_CONFIGURED/train.record"
+  }
+  label_map_path: "PATH_TO_BE_CONFIGURED/characters_label_map.pbtxt"
+}
+``` change the ` input_path ` to point to the train.record file generated in the previous step and change the ` label_map_path ` to point to the appropriate label map
 
 <a name="abcd"></a>
