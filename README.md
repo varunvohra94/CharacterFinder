@@ -13,7 +13,7 @@ Run the  following commands
  # Change the filneame attribute in the train and eval csvs to point to the correct location of the images
  python change_csv.py
 ```
-**Make sure the images are inside this folder** 
+**Make sure the images are inside the CharacterFinder/ directory** 
 
 ## Generating record files
 
