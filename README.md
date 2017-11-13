@@ -6,10 +6,12 @@
 
 Run the  following commands 
 ```
+ # Unzip the contents
  unzip characters.zip
  unzip eval_images.zip
+ 
+ # Change the filneame attribute in the train and eval csvs to point to the correct location of the images
  python change_csv.py
- # This will change the filneame attribute in csv to point to the correct location of the images located.
 ```
 **Make sure the images are inside this folder** 
 
