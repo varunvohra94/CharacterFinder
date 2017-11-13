@@ -25,7 +25,7 @@ python --csv_input train.csv --output_path train.record --label_map_path charact
 python --csv_input eval.csv --output_path eval.record --label_map_path characters_label_map.pbtext 
 ```
 
-* ** This only creates training and evaluation records for one character - Santa. If you want to train on more characters, follow these [instructions](#abcd) first **
+* **This only creates training and evaluation records for one character - Santa. If you want to train on more characters, follow these [instructions](#abcd) first**
 
 ## Training
 For training you need to construct an object-detection training pipeline. 
