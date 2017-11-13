@@ -16,14 +16,19 @@ Run the  following commands
 ` python change_csv.py `.
 This will change the filneame attribute in csv to point to the correct location of the images located.
 * After the csv points to the correct location, we can generate the record files
-	* `
+	* ``` bash
 	python --csv_input train.csv --output_path train.record --label_map_path characters_label_map.pbtext 
-	` 
+	``` 
 	will generate the record file for training and
-	* ` 
+	* ``` bash 
 	python --csv_input eval.csv --output_path eval.record --label_map_path characters_label_map.pbtext 
-	` 
+	```
 	will generate the record file for evaluation
+* **This only creates training and evaluation records for one character Santa. If you want to train on more characters, follow these [instructions](#abcd) first 
 
 ## Training
-For training you need to construct an object-detection training pipeline. You can use any of the  
+For training you need to construct an object-detection training pipeline. 
+* You can use any of the config files present in object\_detection/samples/configs as basis
+* 
+
+<a name="abcd"></a>
