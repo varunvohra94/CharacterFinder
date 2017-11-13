@@ -16,11 +16,11 @@ Run the  following commands
 ` python change_csv.py `.
 This will change the filneame attribute in csv to point to the correct location of the images located.
 * After the csv points to the correct location, we can generate the record files
-	`
+	* `
 	python --csv_input train.csv --output_path train.record --label_map_path characters_label_map.pbtext 
 	` 
 	will generate the record file for training and
-	` 
+	* ` 
 	python --csv_input eval.csv --output_path eval.record --label_map_path characters_label_map.pbtext 
 	` 
 	will generate the record file for evaluation
