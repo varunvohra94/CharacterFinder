@@ -8,13 +8,15 @@ Run the  following commands
 ```
  unzip characters.zip
  unzip eval_images.zip
+ python change_csv.py
+ # This will change the filneame attribute in csv to point to the correct location of the images located.
 ```
 **Make sure the images are inside this folder** 
 
 ## Generating record files
-* Run the following command 
-` python change_csv.py `.
-This will change the filneame attribute in csv to point to the correct location of the images located.
+
+**The following instuctions only creates training and evaluation records for one character - Santa. If you want to train on more characters, follow these [instructions](#abcd) first**
+
 * After the csv points to the correct location, we can generate the record files
  ``` bash
 # Generate training record
@@ -25,11 +27,11 @@ python --csv_input train.csv --output_path train.record --label_map_path charact
 python --csv_input eval.csv --output_path eval.record --label_map_path characters_label_map.pbtext 
 ```
 
-* **This only creates training and evaluation records for one character - Santa. If you want to train on more characters, follow these [instructions](#abcd) first**
 
 ## Training
 For training you need to construct an object-detection training pipeline. 
-* You can use any of the config files present in object\_detection/samples/configs as basis
+* You can use any of the config files present in object\_detection/samples/configs/ as basis
+* Adjust the number of classes depending on the number of character you are training on
 * 
 
 <a name="abcd"></a>
